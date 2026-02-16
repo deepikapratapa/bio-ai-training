@@ -1,0 +1,63 @@
+name: biotm3
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  # -----------------------
+  # Core
+  # -----------------------
+  - python=3.11
+  - pip
+
+  # -----------------------
+  # Scientific Python
+  # -----------------------
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+
+  # -----------------------
+  # Visualization / Notebooks
+  # -----------------------
+  - matplotlib
+  - seaborn
+  - tqdm
+  - ipykernel
+  - notebook
+  - jupyterlab
+  - ipywidgets
+
+  # -----------------------
+  # PyTorch (CPU by default)
+  # For GPU on clusters, install CUDA-specific build separately
+  # -----------------------
+  - pytorch
+  - torchvision
+  - torchaudio
+
+  # -----------------------
+  # Utilities
+  # -----------------------
+  - requests
+
+  - pip:
+      # Hugging Face ecosystem
+      - transformers>=4.40
+      - datasets
+      - evaluate
+      - accelerate
+      - huggingface_hub
+      - safetensors
+      - tokenizers
+      - sentencepiece
+
+      # Bio sequence tools
+      - biopython
+      - einops
+
+      # Embedding visualization
+      - umap-learn
